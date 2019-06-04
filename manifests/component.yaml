@@ -6,3 +6,6 @@ subcomponents:
 - name: traefik
   generator: static
   path: "./traefik"
+- name: manifests
+  generator: static
+  path: "./manifests"
