@@ -6,6 +6,6 @@ subcomponents:
 - name: traefik
   type: static
   path: "./traefik"
-- name: manifests
+- name: manifest
   type: static
-  path: "./manifests"
+  path: "./manifest"
