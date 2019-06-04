@@ -1,0 +1,7 @@
+apiVersion: rings.microsoft.com/v1alpha1
+kind: Ring
+metadata:
+  name: example-ring
+spec:
+  # Add fields here
+  size: 3
