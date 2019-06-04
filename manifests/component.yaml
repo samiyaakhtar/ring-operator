@@ -1,0 +1,8 @@
+name: "ring-operator-dependencies"
+subcomponents:
+- name: crds
+  generator: static
+  path: "./crds"
+- name: traefik
+  generator: static
+  path: "./traefik"

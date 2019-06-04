@@ -29,6 +29,30 @@ spec:
           type: object
         spec:
           type: object
+          required:
+            - deploy
+            - claim
+            - entryPoints
+            - match
+            - selector
+          properties:
+            deploy:
+              type: boolean
+              description: 'Deploy will inform the CI/CD system whether or not to deploy the codebase to a live environment'
+            claim:
+              type: string
+              description: 'Claim will be used to route user traffic to different instances of deployments'
+            entryPoints:
+              type: array
+              description: 'Entrypoints inform which types of traffic will be received (eg: http, https, internal)'
+              items:
+                type: string
+            match:
+              type: string
+              description: 'Match is the routing rule to be used for this route (eg: PathPrefix(`/query/v1`)'
+            selector:
+              type: object
+              description: 'Selector is used for targetting a certain deployment'
         status:
           type: object
   version: v1alpha1
