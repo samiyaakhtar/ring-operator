@@ -1,11 +1,11 @@
 name: "ring-operator-dependencies"
 subcomponents:
 - name: crds
-  generator: static
+  type: static
   path: "./crds"
 - name: traefik
-  generator: static
+  type: static
   path: "./traefik"
 - name: manifests
-  generator: static
+  type: static
   path: "./manifests"
