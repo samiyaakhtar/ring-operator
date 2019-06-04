@@ -1,3 +1,3 @@
 name: "ring-operator"
-generator: "component"
+type: "component"
 path: "./manifests"
