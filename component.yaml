@@ -1,3 +1,9 @@
 name: "ring-operator"
-type: "static"
-path: "./manifests"
+subcomponents:
+  - name: "ring"
+    type: "static"
+    path: "./ring"
+  - name: "traefik"
+    type: "static"
+    path: "./traefik"
+
