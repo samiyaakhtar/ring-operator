@@ -1,3 +1,5 @@
 name: "ring-operator"
-type: "component"
-path: "./manifests"
+subcomponents:
+  - name: "manifests"
+    type: "component"
+    source: "./manifests"
