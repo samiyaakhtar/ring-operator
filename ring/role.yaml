@@ -50,5 +50,6 @@ rules:
   - traefik.containo.us
   resources:
   - 'ingressroutes'
+  - 'middlewares'
   verbs:
   - '*'
