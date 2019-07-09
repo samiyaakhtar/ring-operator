@@ -42,3 +42,5 @@ spec:
               containerPort: 8010
             - name: admin
               containerPort: 8080
+      imagePullSecrets:
+        - name: azurecr
