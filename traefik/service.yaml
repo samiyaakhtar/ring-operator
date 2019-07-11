@@ -6,10 +6,12 @@ spec:
   ports:
     - protocol: TCP
       name: http
-      port: 8000
+      port: 80
+      targetPort: 8000
     - protocol: TCP
       name: https
-      port: 4443
+      port: 443
+      targetPort: 4443
     - protocol: TCP
       name: internal
       port: 8010
