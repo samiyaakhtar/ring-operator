@@ -54,7 +54,6 @@ spec:
                       type: string
                   required:
                   - name
-                  - initialUsers
                   type: object
                 ports:
                   description: Ports will expose these ports on the services and verified
