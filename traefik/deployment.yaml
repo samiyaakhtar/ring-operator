@@ -28,11 +28,10 @@ spec:
           args:
             - --api
             - --accesslog
-            - --entrypoints=Name:http Address::8000
-            - --entrypoints=Name:https Address::4443
-            - --entrypoints=Name:internal Address::8010
+            - --entrypoints.http.Address=:8000
+            - --entrypoints.https.Address=:4443
+            - --entrypoints.internal.Address=:8010
             - --providers.kubernetescrd
-            # - --providers.kubernetescrd.trace
           ports:
             - name: http
               containerPort: 8000
