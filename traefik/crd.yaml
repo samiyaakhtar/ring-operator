@@ -11,6 +11,7 @@ spec:
     plural: ingressroutes
     singular: ingressroute
   scope: Namespaced
+
 ---
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
@@ -25,6 +26,7 @@ spec:
     plural: ingressroutetcps
     singular: ingressroutetcp
   scope: Namespaced
+
 ---
 apiVersion: apiextensions.k8s.io/v1beta1
 kind: CustomResourceDefinition
@@ -38,6 +40,21 @@ spec:
     kind: Middleware
     plural: middlewares
     singular: middleware
+  scope: Namespaced
+
+---
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: tlsoptions.traefik.containo.us
+
+spec:
+  group: traefik.containo.us
+  version: v1alpha1
+  names:
+    kind: TLSOption
+    plural: tlsoptions
+    singular: tlsoption
   scope: Namespaced
 
 ---
@@ -83,6 +100,22 @@ rules:
       - traefik.containo.us
     resources:
       - ingressroutes
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - traefik.containo.us
+    resources:
+      - ingressroutetcps
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups:
+      - traefik.containo.us
+    resources:
+      - tlsoptions
     verbs:
       - get
       - list
